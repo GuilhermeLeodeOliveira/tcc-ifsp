@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    max-width: 400px;
+}
+
+.nav-link{
+    
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.pri{
+    width: 80%;
+    padding: 30px;
+    border: 10px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: cursive;
+    color: #3299CC;
+    text-align: center;
+    font-size: 60px;
+}
+
+h2{
+    font-family: cursive;
+    text-align: center;
+    color: darkgoldenrod;
+    font-size: 50px;
+}
+
+form{
+    margin-top: 25px;   
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: medium;
+}
+
+.formulario{
+    width: 300px;
+    text-align: left;
+}
+
+p.comeco{
+    font-size: 25px;
+}
+
+label{
+    font-size: 20px;
+}
+
+input[type=email],[type=password]{
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    text-align: justify;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.fundo{
+    display: flex;
+    background-color: chartreuse;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#grafico{
+    width:700px;
+    height:500px;
+    background-color: #ffffff;
+    padding:25px;
+    margin:0 auto;
+    display: block;
+}
+
+#textoProduto{
+    width:500px;
+    height:500px;
+    background-color: #ffffff;
+    padding:30px;
+    border:10px;
+    margin:0 auto;
+    display: block;
+}
+
+.organo{
+    width: 100px;
+}
+
+.fundoOrgano{
+    width:700px;
+    text-align: center;
+    background-color: #be0808;
+}
+
+#textoApresentacao{
+    width:500px;
+} 
+
+#missao{
+    width:500px;
+} 
+
+#textoIntegrantes{
+    width:500px;
+    
+    background-color: #ffffff;
+    
+}
+
+@media (max-width: 1064px){
+
+    .nav-link{
+        font-size: 17px;
+    }
+
+    p.comeco{
+        font-size: 20px;
+    }
+}
