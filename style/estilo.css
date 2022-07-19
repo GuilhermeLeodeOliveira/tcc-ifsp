@@ -4,12 +4,19 @@
 }
 
 .logo{
-    max-width: 400px;
+    max-width: 250px;
+}
+
+.navbar-nav{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content:space-between;
 }
 
 .nav-link{
-    
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: black;
 }
@@ -31,13 +38,13 @@ h1{
     font-family: cursive;
     color: #3299CC;
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 h2{
     font-family: cursive;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 form{
@@ -172,6 +179,27 @@ a.cadastro{
     padding: 20px 67px 20px 67px;
 }
 
+
+.fundo-meus-dados-aluno{
+    margin-top: 25px;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.meus-dados-aluno-a{
+}
+
+.linha-vertical{
+    height: 350px;
+    border-left: #66edff solid;
+}
+
+.meus-dados-aluno-b{
+}
+
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     text-align: justify;
@@ -238,7 +266,7 @@ img.displayed {
 @media (max-width: 1064px){
 
     .nav-link{
-        font-size: 17px;
+        font-size: 20px;
     }
 
     h1{
@@ -247,5 +275,9 @@ img.displayed {
 
     p.comeco{
         font-size: 20px;
+    }
+
+    .fundo-meus-dados-aluno{
+        max-width: 80%;
     }
 }
