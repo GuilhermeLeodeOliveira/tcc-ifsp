@@ -176,7 +176,7 @@ a.cadastro{
 
 .box-4{
     grid-area: box-4;
-    padding: 20px 67px 20px 67px;
+    padding: 20px 47px 20px 47px;
 }
 
 
@@ -198,6 +198,75 @@ a.cadastro{
 }
 
 .meus-dados-aluno-b{
+}
+
+div.fundo-txt-turmas{
+    background-color:#f1f0f0;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    
+}
+
+input.txt-turmas{
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: #f1f0f0;
+    border: #000 1px solid;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input.txt-turmas:focus{
+    border: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+button.btn-pesquisa-turmas{
+    width: 20%;
+    border: none;
+    border-radius: 20px;
+    border: #000 1px solid;
+}
+
+div.turmas{
+    width: 480px;
+    height: 115px;
+    background-color:#fafa004b;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: flex;
+    
+}
+
+p.dados{
+    flex: 2;
+    padding: 10px 0px 0px 10px;
+    margin-bottom: 0;
+}
+
+button.matricula{
+    background-color: #f8d300;
+    border-radius: 5px;
+    margin-right: 30px;
+    height: 25px;
+    flex: 0.8;
+    margin-top: 80px;
+    font-size: x-small;
+    border: none;
+    font-weight: bold;
+}
+
+div.foto{
+    flex: 1;
+    border: #000 solid 1px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p{
