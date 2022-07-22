@@ -1,13 +1,11 @@
 <?php
-    $servername="localhost";
-    $username="root";
-    $password="";
-    $bdname="ensinoidiomas";
 
-    $conn= new mysqli($servername, $username, $password, $bdname);
-
+    session_start();
+    require_once("conect.php");
+    
     $email=$_POST['email'];
     $senha=$_POST['senha'];
+    $_SESSION['senha'] = $senha;
     //$senha=base64_encode($senha);
 
     if ($conn->connect_error) {
@@ -26,7 +24,7 @@
     
             if($row['email']==$email && $row['senha']==$senha){
 
-                header("location:../minhacontadoaluno.html");
+                header("location:minhacontadoaluno.html");
             
             } else {
     
