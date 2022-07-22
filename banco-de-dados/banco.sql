@@ -23,7 +23,7 @@ CREATE TABLE professor(
 
 CREATE TABLE aula(
 	idAula serial NOT NULL PRIMARY KEY,
-	displina varchar(100),
+	disciplina varchar(100),
     mestre varchar(225),
     dataInicio DATE,
     dataTermino date,
@@ -31,3 +31,7 @@ CREATE TABLE aula(
     idProfessor int NOT NULL REFERENCES professor(idProfessor),
     idAluno int NOT NULL REFERENCES aluno(idAluno)
 );
+
+SELECT b.idAula, b.displina, p.nome AS 'Professor', a.nome AS 'Aluno' FROM aula b
+JOIN professor p ON p.idProfessor = b.idProfessor
+JOIN aluno a ON b.idAluno = a.idAluno;
