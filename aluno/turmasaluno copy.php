@@ -1,3 +1,10 @@
+<?php
+
+  session_start();
+  require_once("../conect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,18 +18,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style/estilo.css">
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/estilo.css">
     <title>Minha Conta</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
 
                 <marquee behavior="slide" direction="up">
-                    <img class="logo" src="IMG/Logo.png" width="100%" alt="Logo da Empresa" />
+                    <img class="logo" src="../IMG/Logo.png" width="100%" alt="Logo da Empresa" />
                 </marquee>
 
             </a>
@@ -37,38 +44,69 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item ">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link active" href="portal.html">Acesse o nosso portal</a>
+                        <a class="nav-link active" href="../portal.html">Acesse o nosso portal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contatar.html">Entre em contato</a>
+                        <a class="nav-link active" href="../contatar.html">Entre em contato</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link active" href="maisdaequipe.html">Mais sobre nós</a>
+                        <a class="nav-link active" href="../maisdaequipe.html">Mais sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.html" class="nav-link active">Entrar</a>
+                        <a href="../login.html" class="nav-link active">Entrar</a>
                     </li>
                 </ul>
-                
+
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <h2 style="color: #66edff;">Minha conta</h2>
 
-        <div class="cont">
-
-            <a href="meusdadosaluno copy.php" class="box-1 box">MEUS DADOS</a>
-            <a href="" class="box-2 box">MINHAS AULAS</a>
-            <a href="turmasaluno copy.php" class="box-3 box">TURMAS</a>
-            <a href="" class="box-4 box">ATIVIDADES</a>
-
+        <h2 style="color: #66edff;">Turmas</h2>
+        <div class="fundo-txt-turmas d-flex">
+            <input class="txt-turmas" type="text" name="" id="" placeholder="Digite aqui...">
+            <button class="btn-pesquisa-turmas" type="submit">aaa</button>
         </div>
+
+        <?php
+            $senha = $_SESSION['senha'];
+    
+            $sql = "SELECT * FROM professor";
+            
+            $result = $conn->query($sql);
+
+            while($row = $result->fetch_array()) { 
+                $the_rows[] = $row; 
+            }
+
+            foreach($the_rows as $row){
+        
+        ?>
+
+        <div class="turmas">
+
+            <p class="dados"><b><?php echo $row['nome']; ?></b> <br>
+                27 anos <br>
+                <b>Francês</b> <br>
+                PREÇO R$00,00
+            </p>
+
+            <button class="matricula" type="submit">MATRICULE-SE</button>
+
+            <div class="foto">Foto</div>
+                   
+        </div>
+        <?php
+            }
+        ?>
+
     </div>
+
+
 </body>
 
 </html>
