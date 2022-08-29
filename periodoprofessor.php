@@ -41,8 +41,10 @@ include 'includes/head.php';
             
             $idProfessor = $_SESSION['idProfessor'];
             
+            $periodo = $_SESSION['periodoEscolhido'];
+            echo $periodo;
 
-            $sql = "SELECT b.nome, a.periodo, a.materia from aula a
+            $sql = "SELECT b.nome, a.periodo, a.materia FROM aula a
             LEFT JOIN aluno b ON b.idAluno = a.idAluno
             RIGHT JOIN professor p ON p.idProfessor = a.idProfessor
             WHERE p.idProfessor = '$idProfessor'";

@@ -47,7 +47,7 @@ include 'includes/head.php';
 
             $idProfessor = $_SESSION['idProfessor'];
 
-            $sql = "SELECT periodo, disciplina from aula a
+            $sql = "SELECT periodo, disciplina FROM aula a
             JOIN professor p ON a.idProfessor = p.idProfessor
             WHERE p.idProfessor = '$idProfessor'";
 
@@ -60,15 +60,20 @@ include 'includes/head.php';
         ?>
 
         <div class="fundo-turmas-professor">
-            <h3 class="periodo"> <?php echo $row['periodo']; ?>º Período</h3>
-            <h4><?php echo $row['disciplina']; ?></h4>
-            <?php echo"<a href='periodoprofessor.php' class='ver-turma' id='periodo$i' >VER TURMA</a>"; ?>
+        <?php 
+        $periodo=  $row['periodo']; 
+        $disciplina = $row['disciplina'];
+
+        echo"<h3 class='periodo'>".$row['periodo']."º Período <br>".$row['disciplina']."</h3>"; ?></h3>
+            <?php echo"<a href='periodoprofessor.php' class='ver-turma' id='periodo$periodo-$disciplina'>VER TURMA</a>"; ?>
         </div>
 
         <?php
                 $i++;
             }
         ?>
+
+            
 
     </div>
 </body>
