@@ -5,7 +5,7 @@
     
     $email=$_POST['email'];
     $senha=$_POST['senha'];
-    $_SESSION['senha'] = $senha;
+    
     //$senha=base64_encode($senha);
 
     if ($conn->connect_error) {
@@ -14,7 +14,7 @@
     
     }
 
-    $sql = "SELECT email, senha FROM aluno;";
+    $sql = "SELECT idAluno, email, senha FROM aluno;";
     
     $result = $conn->query($sql);  // aqui
     
@@ -22,7 +22,8 @@
 
         if($row['email']==$email && $row['senha']==$senha){
 
-            header("location:aluno/minhaconta.html");
+            $_SESSION['idAluno'] = $row['idAluno'];
+            header("location:minhacontaaluno.php");
         
         }  
     }
@@ -35,7 +36,9 @@
 
         if($row['email']==$email && $row['senha']==$senha){
 
-            header("location:professor/minhaconta.html");
+            $_SESSION['idProfessor'] = $row['idProfessor'];
+
+            header("location:minhacontaprofessor.html");
         
         }     
     }

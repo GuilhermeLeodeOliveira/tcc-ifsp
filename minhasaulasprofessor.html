@@ -57,18 +57,41 @@
         </div>
     </nav>
 
+    <h2 style="color: #66edff;">Minhas aulas</h2>
 
-    <h2 style="color: #66edff;">Minha conta</h2>
+    <form class="minha-aula" action="" method="post">
 
-    <div class="cont-aluno">
+        <div class="minhas-aulas-esquerda">
 
-        <a href="meusdadosaluno copy.php" class="box-1 box">MEUS DADOS</a>
-        <a href="" class="box-2 box">MINHAS AULAS</a>
-        <a href="desempenho.html" class="box-3 box">DESEMPENHO</a>
-        <a href="turmasaluno copy.php" class="box-4 box">TURMAS</a>
-        <a href="" class="box-5 box">ATIVIDADES</a>
+            <label for="">Seu nome:</label><br>
+            <input type="text" class="minhas-aulas" name="" id="" placeholder="ex: João">
 
-    </div>
+            <label for="">Aula:</label><br>
+            <input type="text" class="minhas-aulas" name="" id="" placeholder="ex:#8">
+
+            <label for="">Título da aula:</label><br>
+            <input type="text" class="minhas-aulas" name="" id="" placeholder="ex:conjugação de verbos em francês">
+
+        </div>
+
+        <div class="minhas-aulas-direita">
+            <label for="arquivo" class="arquivo">Enviar Arquivo</label>
+            <input type="file" name="arquivo" id="arquivo">
+
+            <select name="" id="" class="aula">
+                <option value="">inglês</option>
+                <option value="">francês</option>
+            </select>
+
+            <input type="submit" class="enviar-minhas-aulas" value="Enviar Aula">
+
+        </div>
+
+
+
+    </form>
+
+
 </body>
 
 </html>

@@ -3,6 +3,125 @@
     padding: 0;
 }
 
+#preloader {
+    
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#F66B6B; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas > div {
+  display: inline-block;
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas > div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
+}#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#F66B6B; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas > div {
+  display: inline-block;
+  background-color: #fff;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas > div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
+}
+
 /*NAVBAR*/
 .logo{
     max-width: 250px;
@@ -48,7 +167,7 @@ h2{
     font-size: 40px;
 }
 /*tela login*/
-form{
+form.login{
     margin-top: 25px;   
     margin-bottom: 80px;
     text-align: center;
@@ -372,13 +491,110 @@ div.foto{
 /*tela minhas aulas da pasta professor*/
 
 form.minha-aula{
+    display: flex;
     border: #000 solid 5px;
     border-radius: 10px;
-    width: 900px;
+    width: 700px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 15px 15px 15px;
+}
 
+.minhas-aulas-esquerda{
+    width: 70%;
+}
+
+input.minhas-aulas{
+    width: 90%;
+    height: 50px;
+    padding: 5px;
+}
+
+.minhas-aulas-direita{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label.arquivo{
+    background-color: chartreuse;
+    padding: 3px;
+    border: solid #000 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size:medium;
+    -webkit-box-shadow: 1px 1px 5px 0 #9c9a9a;
+    -moz-box-shadow: 1px 1px 5px 0 #9c9a9a;
+    box-shadow: 1px 1px 5px 0 #9c9a9a;
+}
+
+label.arquivo:hover{
+    cursor: pointer;
+}
+
+select.aula{
+    height: 40px;
+}
+
+input.enviar-minhas-aulas{
+    background-color: chartreuse;
+    border: solid chartreuse 1px;
+    
+    padding: 10px;
+}
+
+/*tela "turmas" da pasta professor*/
+div.fundo-turmas-professor{
+    width: 60%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #3299CC;
+}
+
+a.ver-turma{
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-size: small;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    margin-top: 100px;
+    background-color:#f8d300;
+}
+
+h3.periodo{
+    font-weight: bolder;
+}
+
+/*Tela período.html da pasta professor*/
+
+table{
+    border: 1px solid #000;
+    width: 80%;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+th{
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+}
+tr{
+    padding: 10px;
 }
 
 p{
@@ -461,4 +677,9 @@ img.displayed {
     .fundo-meus-dados-aluno{
         max-width: 80%;
     }
+
+    div.fundo-turmas-professor{
+        width: 90%;
+    }
+
 }
