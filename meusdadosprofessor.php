@@ -16,7 +16,6 @@
 }
 
 ?>
-
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -38,6 +37,20 @@ include 'includes/head.php';
 
 <body>
 
+ <!-- início do preloader -->
+ <div id="preloader">
+  <div class="inner">
+     <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+     <img src="IMG/gifs/1474.gif" alt="" width="100px">
+     <div class="bolas">
+        <div></div>
+        <div></div>
+        <div></div>                    
+     </div>
+  </div>
+</div>
+<!-- fim do preloader --> 
+
   <h2 style="color: #3299CC;">Meus dados</h2>
   <div class="fundo-meus-dados">
     
@@ -45,10 +58,10 @@ include 'includes/head.php';
       
       <?php
 
-        $senha = $_SESSION['senha'];
+        $idProfessor = $_SESSION['idProfessor'];
         
         $sql = "SELECT * from professor
-        WHERE senha = '$senha'";
+        WHERE idProfessor = '$idProfessor'";
         
         $result = $conn->query($sql);
         
@@ -85,6 +98,7 @@ include 'includes/head.php';
       <?php
             $i++;
         }
+      
       ?>
 
     </div>
@@ -99,7 +113,7 @@ include 'includes/head.php';
 
       $sql = "SELECT a.disciplina, a.dataInicio, p.emailInst FROM aula a
               JOIN professor p ON a.idProfessor = p.idProfessor
-              WHERE p.senha = '$senha'";
+              WHERE p.idProfessor = '$idProfessor'";
 
       $result = $conn->query($sql);
       

@@ -28,7 +28,7 @@
         }  
     }
 
-    $sql = "SELECT email, senha FROM professor;";
+    $sql = "SELECT idProfessor, email, senha FROM professor;";
 
     $result = $conn->query($sql);  // aqui
 
@@ -38,7 +38,7 @@
 
             $_SESSION['idProfessor'] = $row['idProfessor'];
 
-            header("location:minhacontaprofessor.html");
+            header("location:minhacontaprofessor.php");
         
         }     
     }
