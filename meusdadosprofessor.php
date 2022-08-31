@@ -41,7 +41,7 @@ include 'includes/head.php';
  <div id="preloader">
   <div class="inner">
      <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-     <img src="IMG/gifs/1474.gif" alt="" width="100px">
+     <img src="IMG/gifs/teste.gif" alt="">
      <div class="bolas">
         <div></div>
         <div></div>

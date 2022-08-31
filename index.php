@@ -21,7 +21,7 @@ include 'includes/head.php';
  <div id="preloader">
   <div class="inner">
      <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-     <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/qEnIfta80c9rSs6I94" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/qEnIfta80c9rSs6I94">via GIPHY</a></p>
+     <img src="IMG/gifs/teste.gif" alt="">
      <div class="bolas">
         <div></div>
         <div></div>

@@ -36,6 +36,20 @@ include 'includes/head.php';
 
 ?>
 
+ <!-- início do preloader -->
+ <div id="preloader">
+  <div class="inner">
+     <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+     <img src="IMG/gifs/teste.gif" alt="">
+     <div class="bolas">
+        <div></div>
+        <div></div>
+        <div></div>                    
+     </div>
+  </div>
+</div>
+<!-- fim do preloader --> 
+
   <h2 style="color: #3299CC;">Meus dados</h2>
   <div class="fundo-meus-dados">
     
