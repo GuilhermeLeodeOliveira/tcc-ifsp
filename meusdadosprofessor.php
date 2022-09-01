@@ -109,8 +109,6 @@ include 'includes/head.php';
       
     <?php
 
-      $senha = $_SESSION['senha'];
-
       $sql = "SELECT a.disciplina, a.dataInicio, p.emailInst FROM aula a
               JOIN professor p ON a.idProfessor = p.idProfessor
               WHERE p.idProfessor = '$idProfessor'";
@@ -151,9 +149,9 @@ include 'includes/head.php';
 
       <p><strong>E-mail institucional:</strong><br>
       <?php 
-        foreach($the_rows as $row){
-            echo "".$row['emailInst'].":";
-          }
+        
+        echo "".$row['emailInst'].":";
+          
       ?>
         
       </p>

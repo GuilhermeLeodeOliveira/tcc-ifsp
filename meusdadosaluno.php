@@ -107,12 +107,12 @@ include 'includes/head.php';
       
     <?php
 
-      $senha = $_SESSION['senha'];
+      
 
       $sql = "SELECT a.disciplina, p.nome AS 'mestres', a.periodo FROM `aula` a
       JOIN aluno b ON b.idAluno = a.idAluno
       JOIN professor p ON p.idProfessor = a.idProfessor
-      WHERE b.senha = '$senha'";
+      WHERE b.idAluno = '$idAluno'";
 
       $result = $conn->query($sql);
       
