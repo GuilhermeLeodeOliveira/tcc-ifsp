@@ -10,6 +10,9 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
 
+  <link rel="manifest" href="manifest.json">
+    <script src="js/main.js" defer></script>
+
   <link rel="stylesheet" href="style/estilo.css">
   <script src="js/preloader.js"></script>
   
