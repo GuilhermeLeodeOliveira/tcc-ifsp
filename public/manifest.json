@@ -1,9 +1,9 @@
 {
-    "name": "Cardápio",
-    "short_name": "App",
-    "description": "WEB APP para aprender PWA (Disciplina PAMII).",
+    "name": "DocClass.com",
+    "short_name": "DocClass",
+    "description": "Web app DocClass.com",
     "display": "fullscreen",
-    "start_url":"index.html",    
+    "start_url":"index.php",    
     "scope": "/",
     
     "icons": [
