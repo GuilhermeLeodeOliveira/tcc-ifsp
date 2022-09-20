@@ -1,8 +1,8 @@
 <?php
-  $servername="localhost";
-  $username="root";
-  $password="";
-  $bdname="ensinoidiomas";
+  $servername="us-cdbr-east-06.cleardb.net";
+  $username="b239746dacd964:0874e7e3";
+  $password="0874e7e3";
+  $bdname="heroku_e15bdec44131aa1";
 
   $conn= new mysqli($servername, $username, $password, $bdname);
   $_SESSION['conn'] = $conn;
