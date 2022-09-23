@@ -1,6 +1,6 @@
 <?php
   $servername="us-cdbr-east-06.cleardb.net";
-  $username="b239746dacd964:0874e7e3";
+  $username="b239746dacd964";
   $password="0874e7e3";
   $bdname="heroku_e15bdec44131aa1";
 
