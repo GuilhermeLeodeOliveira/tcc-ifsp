@@ -50,14 +50,14 @@ include 'includes/head.php';
                 <input type="password" name="senha" id="" placeholder="********">
             </div>
             <br>
-            <input type="submit" value="ENTRAR">
+            <input type="submit" class="btn-grande" value="ENTRAR">
 
         </form>
 
         <div class="final-login">
             <p class="final-login-cadastro">Não tem uma conta? <br>
                 Faça o seu cadastro</p>
-            <a class="cadastro" href="cadastro.html">CADASTRO</a>
+            <a class="btn-pequeno" href="cadastro.html">CADASTRO</a>
         </div>
     </div>
 

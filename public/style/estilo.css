@@ -106,6 +106,7 @@ h1{
     color: #3299CC;
     text-align: center;
     font-size: 50px;
+    text-transform: uppercase;
 }
 
 h2{
@@ -139,6 +140,16 @@ label{
     
 }
 
+input{
+    padding-left: 10px;
+    border:outset 1px #000;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
 input[type=email],[type=password]{
     height: 45px;
     width: 100%;
@@ -146,18 +157,28 @@ input[type=email],[type=password]{
     border: solid 1px #000;
 }
 
-input[type=submit]{
-    padding: 10px 50px 10px 50px;
+.btn-grande{
+    margin-top: 20px;
+    padding: 15px 40px 15px 40px;
     background-color: #FFFDC6;
     border-radius: 5px;
-    font-weight: bold;
-
+    font-weight:500;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
     -webkit-box-shadow: 1px 1px 5px 0 #9c9a9a;
     -moz-box-shadow: 1px 1px 5px 0 #9c9a9a;
     box-shadow: 1px 1px 5px 0 #9c9a9a;
    
     border: solid #FFFDC6 1px;
 }
+
+div.btn-cadastro{
+    display: flex;
+    flex-direction: column;
+}
+
 
 input[type=email]:focus, [type=password]:focus{
     box-shadow: 0 0 0 0;
@@ -178,7 +199,7 @@ p.final-login-cadastro{
     font-size: 25px;
 }
 
-a.cadastro{
+a.btn-pequeno{
     padding: 10px 30px 10px 30px;
     background-color: #FFFDC6;
     border-radius: 5px;
@@ -353,7 +374,7 @@ a.cadastro{
     animation-duration: 1s;
 }
 
-/*tela "turmas" da pasta aluno*/
+/*tela "turmas-aluno"*/
 div.fundo-txt-turmas{
     background-color:#f1f0f0;
     width: 400px;
@@ -497,7 +518,7 @@ input.enviar-minhas-aulas{
     padding: 10px;
 }
 
-/*tela "turmas" da pasta professor*/
+/*tela "turmas-professor"*/
 div.fundo-turmas-professor{
     width: 60%;
     padding: 10px;
@@ -548,6 +569,43 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     text-align: justify;
 }
+
+form.cad-cli{
+    display: flex;
+    flex-direction: row;
+    
+    background-color: #66edff;
+}
+
+input.btn-cad-cli{
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-weight:500;
+    color: #000;
+
+    background-color: #3299CC;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 1px 1px 5px 0 #3299CC;
+    -moz-box-shadow: 1px 1px 5px 0 #3299CC;
+    box-shadow: 1px 1px 5px 0 #3299CC;
+   
+    border: solid #3299CC 1px;
+    
+    margin-bottom: 10px;
+}
+
+input.in-cad-cli{
+    width: 250px;
+    height: 50px;
+}
+
+
+
+
 
 img.displayed {
     display: block;
