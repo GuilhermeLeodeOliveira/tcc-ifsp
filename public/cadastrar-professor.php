@@ -18,11 +18,11 @@
     
     }
 
-    $sql = "INSERT INTO aluno VALUES (DEFAULT, '$nome', '$cpf', '$email', '$senha', '$dataNasc', '$tel');";
+    $sql = "INSERT INTO professor VALUES (DEFAULT, '$nome', '$cpf', '$email', '$senha', '$dataNasc', '$tel');";
 
     $result = $conn->query($sql);
 
-    $sql = "SELECT idAluno, email, senha FROM aluno;";
+    $sql = "SELECT idProfessor, email, senha FROM professor;";
 
     $result = $conn->query($sql);
 
@@ -30,8 +30,8 @@
 
         if($row['email']==$email && $row['senha']==$senha){
 
-            $_SESSION['idAluno'] = $row['idAluno'];
-            header("location:minhacontaaluno.php");
+            $_SESSION['idProfessor'] = $row['idProfessor'];
+            header("location:minhacontaprofessor.php");
         
         }  
     }
