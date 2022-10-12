@@ -17,16 +17,16 @@
         die("Falha na conexão " . $conn->connect_error);
     
     }
-
+/*
     $sql = "INSERT INTO `aluno` VALUES (DEFAULT, `$nome`, `$cpf`, `$email`, `$senha`, `$dataNasc`, `$tel`);";
 
     $result = $conn->query($sql);
 
-    $sql = "SELECT idAluno, email, senha FROM professor;";
+    $sql = "SELECT idAluno, email, senha FROM aluno;";
 
     $result = $conn->query($sql);
 
-    $_SESSION['idAluno'] = $row['idAluno'];
+    $_SESSION['idAluno'] = $row['idAluno'];*/
     header("location:minhacontaaluno.php");
 
 
