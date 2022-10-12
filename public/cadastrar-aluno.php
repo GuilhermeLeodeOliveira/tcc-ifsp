@@ -30,6 +30,8 @@
 
     echo $row['idAluno'];
 
+    echo "<p>salve</p>";
+
     //header("location:minhacontaaluno.php");
 
 
