@@ -97,20 +97,20 @@ include 'includes/head.php';
     
     <div class="meus-dados-b"><!--Lembrar de perguntar sobre a alteração que fiz no layout, se aprovarem devo apagar a classe dessa div e apagar no css-->
       
-    <?php
+      <?php
 
-      $sql = "SELECT a.disciplina, a.dataInicio, p.emailInst FROM aula a
-              JOIN professor p ON a.idProfessor = p.idProfessor
-              WHERE p.idProfessor = '$idProfessor'";
+        $sql = "SELECT a.disciplina, a.dataInicio FROM aula a
+                JOIN professor p ON a.idProfessor = p.idProfessor
+                WHERE p.idProfessor = '$idProfessor'";
 
-      $result = $conn->query($sql);
-      
-      while($row = $result->fetch_array()) { 
-        $the_rows[] = $row; 
-      }
-		  
-      
-    ?>
+        $result = $conn->query($sql);
+        
+        while($row = $result->fetch_array()) { 
+          $the_rows[] = $row; 
+        }
+        
+        
+      ?>
 
       <p><strong>Disciplinas:</strong><br>
         <?php 
@@ -137,7 +137,7 @@ include 'includes/head.php';
         
       </p>
 
-      
+        
 
     </div>
   
