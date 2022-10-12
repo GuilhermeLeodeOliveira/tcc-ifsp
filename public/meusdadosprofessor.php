@@ -137,8 +137,7 @@ include 'includes/head.php';
         
       </p>
 
-        
-      </p>
+      
 
     </div>
   
