@@ -4,7 +4,7 @@ USE ensinoidiomas;
 CREATE TABLE aluno(
     idAluno serial NOT NULL PRIMARY KEY,
     nome varchar(225),
-    cpf varchar(11),
+    cpf varchar(14),
     email varchar(225),
     senha varchar(100),
     dataNasc DATE,
@@ -14,11 +14,11 @@ CREATE TABLE aluno(
 CREATE TABLE professor(
     idProfessor serial NOT NULL PRIMARY KEY,
     nome varchar(225),
-    cpf varchar(11),
+    cpf varchar(14),
     email varchar(225),
     senha varchar(100),
     dataNasc DATE,
-    telefone varchar(11)
+    telefone varchar(14)
 );
 
 CREATE TABLE aula(

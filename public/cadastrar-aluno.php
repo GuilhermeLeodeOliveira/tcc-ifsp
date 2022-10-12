@@ -18,20 +18,6 @@
     
     }
 
-
-    echo $email;
-    echo "<br>";
-    echo $senha;
-    echo "<br>";
-    echo $nome;
-    echo "<br>";
-    echo $dataNasc;
-    echo "<br>";
-    echo $cpf;
-    echo "<br>";
-    echo $tel;
-
-    /*
     $sql = "INSERT INTO aluno VALUES (DEFAULT, '$nome', '$cpf', '$email', '$senha', '$dataNasc', '$tel');";
 
     $result = $conn->query($sql);
@@ -39,20 +25,17 @@
     $sql = "SELECT idAluno, email, senha FROM aluno;";
 
     $result = $conn->query($sql);
-*/
 
     while($row = $result->fetch_assoc()) {
 
-        /*
         if($row['email']==$email && $row['senha']==$senha){
 
             $_SESSION['idAluno'] = $row['idAluno'];
             header("location:minhacontaaluno.php");
         
         }  
-        */
     }
-  
+
     
 
 
