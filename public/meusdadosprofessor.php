@@ -3,17 +3,7 @@
   session_start();
   require_once("conect.php");
 
-  function Mask($mask,$str){
-
-    $str = str_replace(" ","",$str);
-
-    for($i=0;$i<strlen($str);$i++){
-        $mask[strpos($mask,"#")] = $str[$i];
-    }
-
-    return $mask;
-
-}
+  
 
 ?>
 <!DOCTYPE html>
@@ -76,12 +66,12 @@ include 'includes/head.php';
       </p>
 
       <p><strong>CPF:</strong><br>
-      <?php echo Mask("###.###.###/##", $row['cpf']); ?>
+      <?php echo $row['cpf']; ?>
       
       </p>
 
       <p><strong>Telefone:</strong><br>
-      <?php echo Mask("(##)#####-####" ,$row['telefone']); ?>
+      <?php echo $row['telefone']; ?>
       
       </p>
 
