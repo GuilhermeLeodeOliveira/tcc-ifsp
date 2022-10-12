@@ -73,7 +73,7 @@ include 'includes/head.php';
       
       </p>
 
-      <p><strong>e-mail:</strong><br>
+      <p><strong>E-mail:</strong><br>
       <?php echo $row['email']; ?>
        
       </p>

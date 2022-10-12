@@ -50,7 +50,7 @@ include 'includes/head.php';
 
         $idProfessor = $_SESSION['idProfessor'];
         
-        $sql = "SELECT * from professor
+        $sql = "SELECT * FROM professor
         WHERE idProfessor = '$idProfessor'";
         
         $result = $conn->query($sql);
@@ -70,14 +70,14 @@ include 'includes/head.php';
       
       </p>
 
+      <p><strong>E-mail:</strong><br>
+      <?php echo $row['email']; ?>
+       
+      </p>
+      
       <p><strong>Telefone:</strong><br>
       <?php echo $row['telefone']; ?>
       
-      </p>
-
-      <p><strong>e-mail:</strong><br>
-      <?php echo $row['email']; ?>
-       
       </p>
 
       <p><strong>Data de Nascimento:</strong><br>
