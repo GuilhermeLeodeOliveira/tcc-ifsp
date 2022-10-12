@@ -8,7 +8,7 @@ CREATE TABLE aluno(
     email varchar(225),
     senha varchar(100),
     dataNasc DATE,
-    telefone varchar(11)
+    telefone varchar(14)
 );
 
 CREATE TABLE professor(
