@@ -71,7 +71,7 @@
 
 /*NAVBAR*/
 .logo{
-    max-width: 250px;
+    max-width: 150px;
 }
 
 .navbar-nav{
@@ -114,6 +114,11 @@ h2{
     text-align: center;
     font-size: 40px;
 }
+
+a:hover{
+    color: #000;
+}
+
 /*tela login*/
 form.login{
     margin-top: 25px;   
@@ -140,9 +145,17 @@ label{
     
 }
 
-input{
-    padding-left: 10px;
+select{
+    height: 50px;
+    width: 100%;
     border:outset 1px #000;
+}
+
+input{
+    
+    border:outset 1px #000;
+    height: 45px;
+    width: 100%;
 }
 
 input:focus{
@@ -150,40 +163,43 @@ input:focus{
     outline: 0;
 }
 
-input[type=email],[type=password]{
-    height: 45px;
-    width: 100%;
+input[type=email],[type=password], [type=text], [type=date]{
     padding: 10px;
     border: solid 1px #000;
+    padding-left: 10px;
 }
 
 .btn-grande{
+    
     margin-top: 20px;
-    padding: 15px 40px 15px 40px;
     background-color: #FFFDC6;
     border-radius: 5px;
     font-weight:500;
     color: #000;
     text-transform: uppercase;
-    text-align: center;
     text-decoration: none;
     -webkit-box-shadow: 1px 1px 5px 0 #9c9a9a;
     -moz-box-shadow: 1px 1px 5px 0 #9c9a9a;
     box-shadow: 1px 1px 5px 0 #9c9a9a;
-   
+    
+    height: 45px;
     border: solid #FFFDC6 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.btn-cadastro{
     display: flex;
     flex-direction: column;
+    width: 300px;
 }
 
 
 input[type=email]:focus, [type=password]:focus{
     box-shadow: 0 0 0 0;
     outline: 0;
-    border:outset  2px #000;
+    border:outset  1px #000;
 }
 
 .final-login{
@@ -570,15 +586,17 @@ p{
     text-align: justify;
 }
 
+/*telas cad-aluno e cad-professor*/
+
 form.cad-cli{
-    display: flex;
-    flex-direction: row;
-    
-    background-color: #66edff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'cad-box-1 cad-box-2'
+    'cad-box-3 cad-box-3';
 }
 
 input.btn-cad-cli{
-    text-transform: uppercase;
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     font-weight:500;
@@ -596,6 +614,18 @@ input.btn-cad-cli{
     border: solid #3299CC 1px;
     
     margin-bottom: 10px;
+}
+
+.cad-box-1{
+    grid-area: cad-box-1;
+}
+
+.cad-box-2{
+    grid-area: cad-box-2;
+}
+
+.cad-box-3{
+    grid-area: cad-box-3;
 }
 
 input.in-cad-cli{

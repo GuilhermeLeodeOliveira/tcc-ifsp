@@ -6,7 +6,7 @@
     $email=$_POST['email'];
     $senha=$_POST['senha'];
     
-    //$senha=base64_encode($senha);
+    $senha=base64_encode($senha);
 
     if ($conn->connect_error) {
     

@@ -1,5 +1,6 @@
 CREATE DATABASE ensinoidiomas;
 USE ensinoidiomas;
+
 CREATE TABLE aluno(
     idAluno serial NOT NULL PRIMARY KEY,
     nome varchar(225),
@@ -15,8 +16,7 @@ CREATE TABLE professor(
     nome varchar(225),
     cpf varchar(11),
     email varchar(225),
-    senha varchar(8),
-    emailInst varchar(225),
+    senha varchar(100),
     dataNasc DATE,
     telefone varchar(11)
 );
