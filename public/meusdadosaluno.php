@@ -80,7 +80,7 @@ include 'includes/head.php';
       </p>
 
       <p><strong>Telefone:</strong><br>
-      <?php echo Mask("(##)#####-####" ,$row['telefone']); ?>
+      <?php echo Mask("######-####" ,$row['telefone']); ?>
       
       </p>
 
