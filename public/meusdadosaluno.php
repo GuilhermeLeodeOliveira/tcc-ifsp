@@ -75,12 +75,12 @@ include 'includes/head.php';
       </p>
 
       <p><strong>CPF:</strong><br>
-      <?php echo Mask("###.###.###/##", $row['cpf']); ?>
+      <?php echo $row['cpf']; ?>
       
       </p>
 
       <p><strong>Telefone:</strong><br>
-      <?php echo Mask("######-####" ,$row['telefone']); ?>
+      <?php echo $row['telefone']; ?>
       
       </p>
 
