@@ -26,14 +26,17 @@
 
     $result = $conn->query($sql);
 
-    //$_SESSION['idAluno'] = $row['idAluno'];
-
     while($row = $result->fetch_assoc()) {
-    echo $row['idAluno'];
-    }
-    echo "<p>salve</p>";
 
-    //header("location:minhacontaaluno.php");
+        if($row['email']==$email && $row['senha']==$senha){
+
+            $_SESSION['idAluno'] = $row['idAluno'];
+            header("location:minhacontaaluno.php");
+        
+        }  
+    }
+
+    
 
 
     $conn->close();
