@@ -28,8 +28,9 @@
 
     //$_SESSION['idAluno'] = $row['idAluno'];
 
+    while($row = $result->fetch_assoc()) {
     echo $row['idAluno'];
-
+    }
     echo "<p>salve</p>";
 
     //header("location:minhacontaaluno.php");
