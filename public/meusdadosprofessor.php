@@ -137,12 +137,6 @@ include 'includes/head.php';
         
       </p>
 
-      <p><strong>E-mail institucional:</strong><br>
-      <?php 
-        
-        echo "".$row['emailInst'].":";
-          
-      ?>
         
       </p>
 
