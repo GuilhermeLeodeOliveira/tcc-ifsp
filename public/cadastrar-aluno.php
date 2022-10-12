@@ -26,8 +26,11 @@
 
     $result = $conn->query($sql);
 
-    $_SESSION['idAluno'] = $row['idAluno'];
-    header("location:minhacontaaluno.php");
+    //$_SESSION['idAluno'] = $row['idAluno'];
+
+    echo $row['idAluno'];
+
+    //header("location:minhacontaaluno.php");
 
 
     $conn->close();
