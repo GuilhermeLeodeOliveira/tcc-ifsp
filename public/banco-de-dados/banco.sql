@@ -1,25 +1,49 @@
 CREATE DATABASE ensinoidiomas;
 USE ensinoidiomas;
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 CREATE TABLE aluno(
-    idAluno serial NOT NULL PRIMARY KEY,
+    idAluno int(11) NOT NULL,
+    unique_id int(255) NOT NULL,
     nome varchar(225),
     cpf varchar(14),
     email varchar(225),
     senha varchar(100),
     dataNasc DATE,
-    telefone varchar(14)
-);
+    telefone varchar(14),
+    img varchar(255) NOT NULL,
+    'status' varchar(255) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE aluno
+  ADD PRIMARY KEY (idAluno);
+
+ALTER TABLE aluno
+  MODIFY idAluno int(11) NOT NULL AUTO_INCREMENT;
+
 
 CREATE TABLE professor(
-    idProfessor serial NOT NULL PRIMARY KEY,
+    idProfessor int(11) NOT NULL,
+    unique_id int(255) NOT NULL,
     nome varchar(225),
     cpf varchar(14),
     email varchar(225),
     senha varchar(100),
     dataNasc DATE,
-    telefone varchar(14)
-);
+    telefone varchar(14),
+    img varchar(255) NOT NULL,
+    'status' varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE professor
+  ADD PRIMARY KEY (idProfessor);
+
+ALTER TABLE professor
+  MODIFY idProfessor int(11) NOT NULL AUTO_INCREMENT;
 
 CREATE TABLE aula(
 	idAula serial NOT NULL PRIMARY KEY,
@@ -30,7 +54,26 @@ CREATE TABLE aula(
     periodo varchar(10),
     idProfessor int NOT NULL REFERENCES professor(idProfessor),
     idAluno int NOT NULL REFERENCES aluno(idAluno)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE aula
+  ADD PRIMARY KEY (idAula);
+
+ALTER TABLE aula
+  MODIFY idAula int(11) NOT NULL AUTO_INCREMENT;
+
+CREATE TABLE `messages` (
+  `msg_id` int(11) NOT NULL,
+  `incoming_msg_id` int(255) NOT NULL,
+  `outgoing_msg_id` int(255) NOT NULL,
+  `msg` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`msg_id`);
+
+ALTER TABLE `messages`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
 
 SELECT b.idAula, b.displina, p.nome AS 'Professor', a.nome AS 'Aluno' FROM aula b
 JOIN professor p ON p.idProfessor = b.idProfessor
