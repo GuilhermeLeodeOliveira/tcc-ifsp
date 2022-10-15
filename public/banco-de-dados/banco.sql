@@ -48,12 +48,12 @@ ALTER TABLE professor
 CREATE TABLE aula(
 	idAula serial NOT NULL PRIMARY KEY,
 	disciplina varchar(100),
-    mestre varchar(225),
-    dataInicio DATE,
-    dataTermino date,
-    periodo varchar(10),
-    idProfessor int NOT NULL REFERENCES professor(idProfessor),
-    idAluno int NOT NULL REFERENCES aluno(idAluno)
+  mestre varchar(225),
+  dataInicio DATE,
+  dataTermino date,
+  periodo varchar(10),
+  idProfessor int NOT NULL REFERENCES professor(idProfessor),
+  idAluno int NOT NULL REFERENCES aluno(idAluno)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE aula
