@@ -44,8 +44,8 @@
     }
 
     echo"USUÁRIO NÃO ENCONTRADO!";
-echo "p>".$email."</p>";
-    echo "p>".$senha."</p>";
+echo "<p>".$email."</p>";
+    echo "<p>".$senha."</p>";
 
     $conn->close();
 
