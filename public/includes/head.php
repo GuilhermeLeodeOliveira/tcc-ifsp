@@ -13,11 +13,10 @@
   <link rel="manifest" href="manifest.json">
     <script src="js/main.js" defer></script>
 
+  <script src="js/preloader.js"></script>
+
   <link rel="stylesheet" href="style/estilo.css">
 
-  <script src="js/preloader.js"></script>
-  
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 
 </head>

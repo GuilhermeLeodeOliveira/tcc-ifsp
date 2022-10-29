@@ -6,6 +6,13 @@
   }
 ?>
 <?php include_once "include/head.php"; ?>
+
+<head>
+  <title>Chat</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
 <body>
   <div class="wrapper">
     <section class="users">
