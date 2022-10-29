@@ -25,6 +25,7 @@ ALTER TABLE aluno
 ALTER TABLE aluno
   MODIFY idAluno int(11) NOT NULL AUTO_INCREMENT;
 
+/*-------------------------------------------------------------------------*/
 
 CREATE TABLE professor(
     idProfessor int(11) NOT NULL,
@@ -45,6 +46,8 @@ ALTER TABLE professor
 ALTER TABLE professor
   MODIFY idProfessor int(11) NOT NULL AUTO_INCREMENT;
 
+/*------------------------------------------------------------------------*/
+
 CREATE TABLE aula(
 	idAula serial NOT NULL PRIMARY KEY,
 	disciplina varchar(100),
@@ -62,6 +65,8 @@ ALTER TABLE aula
 ALTER TABLE aula
   MODIFY idAula int(11) NOT NULL AUTO_INCREMENT;
 
+/*---------------------------------------------------------------------*/
+
 CREATE TABLE `messages` (
   `msg_id` int(11) NOT NULL,
   `incoming_msg_id` int(255) NOT NULL,
@@ -74,6 +79,8 @@ ALTER TABLE `messages`
 
 ALTER TABLE `messages`
   MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
+
+/*--------------------------------------------------------------------------------------*/
 
 SELECT b.idAula, b.displina, p.nome AS 'Professor', a.nome AS 'Aluno' FROM aula b
 JOIN professor p ON p.idProfessor = b.idProfessor
