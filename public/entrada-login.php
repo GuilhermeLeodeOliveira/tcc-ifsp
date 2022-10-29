@@ -19,7 +19,7 @@
     $result = $conn->query($sql);  // aqui
     
     while($row = $result->fetch_assoc()) {
-
+        echo "<h1>".base64_decode($row['senha'])."</h1>";
         if($row['email']==$email && $row['senha']==$senha){
 
             $_SESSION['idAluno'] = $row['idAluno'];
