@@ -1,3 +1,3 @@
 <?php
-echo "Salve";
+include("public/index.php");
 ?>
