@@ -43,6 +43,9 @@
 
           <li>
             <a class="nav-link active" href="login.php">Entrar</a>
+            <!--
+              <img src="img/perfil/<?php //echo $img; ?>" alt="">
+            -->
           </li>
         </ul>
       </div>

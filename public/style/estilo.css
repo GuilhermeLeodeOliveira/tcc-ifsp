@@ -503,10 +503,6 @@ input.minhas-aulas{
     width: 30%;
 }
 
-input[type="file"]{
-    display: none;
-}
-
 label.arquivo{
     background-color: chartreuse;
     padding: 3px;
@@ -633,8 +629,10 @@ input.in-cad-cli{
     height: 50px;
 }
 
-
-
+input[type="file"]{
+    border: none;
+    margin-top: 5px;
+}
 
 
 img.displayed {

@@ -1,11 +1,9 @@
 <?php 
   session_start();
   include_once "conect.php";
-  if(!isset($_SESSION['unique_id'])){
-    header("location: login.php");
-  }
+  
 ?>
-<?php include_once "include/head.php"; ?>
+<?php include_once "includes/head.php"; ?>
 
 <head>
   <title>Chat</title>
@@ -19,18 +17,25 @@
       <header>
         <div class="content">
           <?php 
-            $sql = mysqli_query($conn, "SELECT * FROM aluno WHERE unique_id = {$_SESSION['unique_id']}");
-            if(mysqli_num_rows($sql) > 0){
-              $row = mysqli_fetch_assoc($sql);
+            $usuario = $_SESSION['usuario'];
+            $id = $_SESSION['id'];
+          
+            $sql = "SELECT nome, img, status FROM $usuario WHERE $id ";
+
+            $result = $conn->query($sql);
+
+            if(mysqli_num_rows($result) > 0){
+              $row = mysqli_fetch_assoc($result);
             }
+
           ?>
-          <img src="php/images/<?php echo $row['img']; ?>" alt="">
+          <img src="IMG/usuarios/<?php echo $row['img']; ?>" alt="">
           <div class="details">
             <span><?php echo $row['nome'] ?></span>
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
+        <a href="php/logout.php?logout_id=<?php echo $id; ?>" class="logout">Logout</a>
       </header>
       <div class="search">
         <span class="text">Select an user to start chat</span>

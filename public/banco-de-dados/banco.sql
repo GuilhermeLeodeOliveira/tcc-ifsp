@@ -5,9 +5,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+DROP TABLE aluno;
 CREATE TABLE aluno(
     idAluno int(11) NOT NULL,
-    unique_id int(255) NOT NULL,
     nome varchar(225),
     cpf varchar(14),
     email varchar(225),
@@ -26,10 +26,9 @@ ALTER TABLE aluno
   MODIFY idAluno int(11) NOT NULL AUTO_INCREMENT;
 
 /*-------------------------------------------------------------------------*/
-
+DROP TABLE professor;
 CREATE TABLE professor(
     idProfessor int(11) NOT NULL,
-    unique_id int(255) NOT NULL,
     nome varchar(225),
     cpf varchar(14),
     email varchar(225),
@@ -47,9 +46,9 @@ ALTER TABLE professor
   MODIFY idProfessor int(11) NOT NULL AUTO_INCREMENT;
 
 /*------------------------------------------------------------------------*/
-
+DROP TABLE aula;
 CREATE TABLE aula(
-	idAula serial NOT NULL PRIMARY KEY,
+	idAula int(11) NOT NULL,
 	disciplina varchar(100),
   mestre varchar(225),
   dataInicio DATE,
@@ -66,7 +65,7 @@ ALTER TABLE aula
   MODIFY idAula int(11) NOT NULL AUTO_INCREMENT;
 
 /*---------------------------------------------------------------------*/
-
+DROP TABLE messages;
 CREATE TABLE `messages` (
   `msg_id` int(11) NOT NULL,
   `incoming_msg_id` int(255) NOT NULL,

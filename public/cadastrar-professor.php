@@ -18,23 +18,58 @@
     
     }
 
-    $sql = "INSERT INTO professor VALUES (DEFAULT, '$nome', '$cpf', '$email', '$senha', '$dataNasc', '$tel');";
+    
+    if(isset($_FILES['image'])){
 
-    $result = $conn->query($sql);
-
-    $sql = "SELECT idProfessor, email, senha FROM professor;";
-
-    $result = $conn->query($sql);
-
-    while($row = $result->fetch_assoc()) {
-
-        if($row['email']==$email && $row['senha']==$senha){
-
-            $_SESSION['idProfessor'] = $row['idProfessor'];
-            header("location:minhacontaprofessor.php");
+        $img_name = $_FILES['image']['name'];
+        $img_type = $_FILES['image']['type'];
+        $tmp_name = $_FILES['image']['tmp_name'];
         
-        }  
+        $img_explode = explode('.',$img_name);
+        $img_ext = end($img_explode);
+
+        $extensions = ["jpeg", "png", "jpg"];
+        
+        if(in_array($img_ext, $extensions) === true){
+        
+            $types = ["image/jpeg", "image/jpg", "image/png"];
+        
+            if(in_array($img_type, $types) === true){
+        
+                $time = time();
+                $new_img_name = $time.$img_name;
+        
+                if(move_uploaded_file($tmp_name,"IMG/usuarios".$new_img_name)){
+        
+                    $status = "Active now";
+                    
+                    $senha=base64_encode($senha);
+                 
+                    $sql = "INSERT INTO professor VALUES (DEFAULT, '$nome', '$cpf', '$email', '$senha', '$dataNasc', '$tel',  '$new_img_name', '$status');";
+
+                    $result = $conn->query($sql);
+
+                    $sql = "SELECT idProfessor, email, senha FROM professor;";
+
+                    $result = $conn->query($sql);
+
+                    while($row = $result->fetch_assoc()) {
+
+                        if($row['email']==$email && $row['senha']==$senha){
+
+                            $_SESSION['id'] = $row['idProfessor'];
+                            $_SESSION['usuario'] = "professor";
+                            
+                            header("location:minhacontaprofessor.php");
+                        
+                        }  
+                    }
+                }
+            }
+        }
     }
+        
+
 
     $conn->close();
 

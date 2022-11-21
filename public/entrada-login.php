@@ -22,7 +22,8 @@
         echo "<h1>".base64_decode($row['senha'])."</h1>";
         if($row['email']==$email && $row['senha']==$senha){
 
-            $_SESSION['idAluno'] = $row['idAluno'];
+            $_SESSION['id'] = $row['idAluno'];
+            $_SESSION['usuario'] = "aluno";
             header("location:minhacontaaluno.php");
         
         }  
@@ -36,8 +37,8 @@
 
         if($row['email']==$email && $row['senha']==$senha){
 
-            $_SESSION['idProfessor'] = $row['idProfessor'];
-
+            $_SESSION['id'] = $row['idProfessor'];
+            $_SESSION['usuario'] = "professor";
             header("location:minhacontaprofessor.php");
         
         }     
