@@ -45,7 +45,7 @@ include 'includes/head.php';
         </div>
 
         <?php
-            $idAluno = $_SESSION['idAluno'];
+        
     
             $sql = "SELECT * FROM professor";
             

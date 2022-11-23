@@ -95,4 +95,4 @@ JOIN aluno b ON b.idAluno = a.idAluno
 JOIN professor p ON p.idProfessor = a.idProfessor
 WHERE b.idAluno = 1;
 
-INSERT INTO `aula`(`idAula`, `disciplina`, `mestre`, `dataInicio`, `dataTermino`, `periodo`, `idProfessor`, `idAluno`) VALUES (DEFAULT,'alemão','Beatriz Alves S.','2022-07-25','2022-08-25','1','2','1')
+INSERT INTO `aula`(`idAula`, `disciplina`, `mestre`, `dataInicio`, `dataTermino`, `periodo`, `idProfessor`, `idAluno`) VALUES (DEFAULT,'alemão','Beatriz Alves S.','2022-07-25','2022-08-25','1','2','1');

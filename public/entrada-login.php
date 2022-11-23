@@ -23,7 +23,7 @@
         if($row['email']==$email && $row['senha']==$senha){
 
             $_SESSION['id'] = $row['idAluno'];
-            $_SESSION['usuario'] = "aluno";
+            $_SESSION['usuario'] = "Aluno";
             header("location:minhacontaaluno.php");
         
         }  
@@ -38,7 +38,7 @@
         if($row['email']==$email && $row['senha']==$senha){
 
             $_SESSION['id'] = $row['idProfessor'];
-            $_SESSION['usuario'] = "professor";
+            $_SESSION['usuario'] = "Professor";
             header("location:minhacontaprofessor.php");
         
         }     

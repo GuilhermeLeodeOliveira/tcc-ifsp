@@ -1,9 +1,7 @@
 <?php 
   session_start();
-  include_once "php/config.php";
-  if(!isset($_SESSION['unique_id'])){
-    header("location: login.php");
-  }
+  include_once "php/conect.php";
+  
 ?>
 <?php include_once "header.php"; ?>
 <body>
@@ -12,7 +10,19 @@
       <header>
         <?php 
           $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
-          $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
+          
+          $usuario = $_SESSION['usuario'];
+          
+          if($usuario == "Aluno"){
+          
+            $sql = mysqli_query($conn, "SELECT * FROM professor WHERE idProfessor = {$user_id}");
+            
+          }else if($usuario == "Professor"){
+            
+            $sql = mysqli_query($conn, "SELECT * FROM aluno WHERE idAluno = {$user_id}");
+          
+          }
+          
           if(mysqli_num_rows($sql) > 0){
             $row = mysqli_fetch_assoc($sql);
           }else{
@@ -20,9 +30,9 @@
           }
         ?>
         <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-        <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        <img src="IMG/usuarios/<?php echo $row['img']; ?>" alt="">
         <div class="details">
-          <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
+          <span><?php echo $row['nome'] ?></span>
           <p><?php echo $row['status']; ?></p>
         </div>
       </header>

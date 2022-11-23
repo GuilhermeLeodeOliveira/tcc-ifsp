@@ -36,7 +36,7 @@
                 $time = time();
                 $new_img_name = $time.$img_name;
         
-                if(move_uploaded_file($tmp_name,"IMG/usuarios".$new_img_name)){
+                if(move_uploaded_file($tmp_name,"IMG/usuarios/".$new_img_name)){
         
                     $status = "Active now";
                     
@@ -57,7 +57,7 @@
                         if($row['email']==$email && $row['senha']==$senha){
                             
                             $_SESSION['id'] = $row['idAluno'];
-                            $_SESSION['usuario'] = "aluno";
+                            $_SESSION['usuario'] = "Aluno";
 
                             header("location:minhacontaaluno.php");
                         

@@ -46,7 +46,7 @@ include 'includes/head.php';
       
       <?php
 
-        $idAluno = $_SESSION['idAluno'];
+        $idAluno = $_SESSION['id'];
         
         $sql = "SELECT * from aluno
         WHERE idAluno = '$idAluno'";

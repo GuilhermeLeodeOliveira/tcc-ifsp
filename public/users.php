@@ -20,7 +20,7 @@
             $usuario = $_SESSION['usuario'];
             $id = $_SESSION['id'];
           
-            $sql = "SELECT nome, img, status FROM $usuario WHERE $id ";
+            $sql = "SELECT * FROM $usuario WHERE id"."$usuario = $id";
 
             $result = $conn->query($sql);
 
