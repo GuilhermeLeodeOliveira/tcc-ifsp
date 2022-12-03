@@ -39,7 +39,7 @@
                 $time = time();
                 $new_img_name = $time.$img_name;
         
-                if(move_uploaded_file($tmp_name,"IMG/usuarios".$new_img_name)){
+                if(move_uploaded_file($tmp_name,"IMG/usuarios/".$new_img_name)){
         
                     $status = "Active now";
                     

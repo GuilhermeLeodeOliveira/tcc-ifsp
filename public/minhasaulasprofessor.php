@@ -33,7 +33,7 @@ include 'includes/head.php';
 </div>
 <!-- fim do preloader --> 
 
-    <h2 style="color: #66edff;">Minhas aulas</h2>
+    <h2>Minhas aulas</h2>
 
     <form class="minha-aula" action="" method="post">
 

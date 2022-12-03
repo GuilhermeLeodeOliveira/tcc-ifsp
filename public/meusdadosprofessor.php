@@ -41,14 +41,14 @@ include 'includes/head.php';
 </div>
 <!-- fim do preloader --> 
 
-  <h2 style="color: #3299CC;">Meus dados</h2>
+  <h2>Meus dados</h2>
   <div class="fundo-meus-dados">
     
     <div class="meus-dados-a"> <!--Lembrar de perguntar sobre a alteração que fiz no layout, se aprovarem devo apagar a classe dessa div e apagar no css-->
       
       <?php
 
-        $idProfessor = $_SESSION['idProfessor'];
+        $idProfessor = $_SESSION['id'];
         
         $sql = "SELECT * FROM professor
         WHERE idProfessor = '$idProfessor'";
@@ -115,19 +115,23 @@ include 'includes/head.php';
       <p><strong>Disciplinas:</strong><br>
         <?php 
           // later use like:
-          foreach($the_rows as $row){
+          if(!empty($the_rows)){
+            foreach($the_rows as $row){
               echo $row['disciplina']."<br>";
-            } 
+            }
+          } 
+
         ?> 
         
       </p>
 
       <p><strong>Data de início:</strong><br>
         <?php 
-        
+        if(!empty($the_rows)){
           foreach($the_rows as $row){
-              echo $row['dataInicio'].":"."<br>";
-            } 
+            echo $row['dataInicio'].":"."<br>";
+          } 
+        }
         ?> 
         
       </p>

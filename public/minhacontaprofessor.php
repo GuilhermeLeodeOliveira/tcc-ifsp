@@ -35,7 +35,7 @@ include 'includes/head.php';
 </div>
 <!-- fim do preloader --> 
 
-    <h2 style="color: #66edff;">Minha conta</h2>
+    <h2>Minha conta</h2>
 
     <div class="cont-professor">
 

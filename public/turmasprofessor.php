@@ -37,7 +37,7 @@ include 'includes/head.php';
 
     <div class="container">
 
-        <h2 style="color: #66edff;">Turmas</h2>
+        <h2>Turmas</h2>
         <div class="fundo-txt-turmas d-flex">
             <input class="txt-turmas" type="text" name="" id="" placeholder="Digite aqui...">
             <button class="btn-pesquisa-turmas" type="submit">aaa</button>
@@ -45,7 +45,7 @@ include 'includes/head.php';
 
         <?php
 
-            $idProfessor = $_SESSION['idProfessor'];
+            $idProfessor = $_SESSION['id'];
 
             $sql = "SELECT periodo, disciplina FROM aula a
             JOIN professor p ON a.idProfessor = p.idProfessor

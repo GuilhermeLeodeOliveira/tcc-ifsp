@@ -96,9 +96,7 @@ include 'includes/head.php';
       
     <?php
 
-      
-
-      $sql = "SELECT a.disciplina, p.nome AS 'mestres', a.periodo FROM `aula` a
+      $sql = "SELECT a.disciplina, p.nome AS 'mestres', a.periodo FROM aula a
       JOIN aluno b ON b.idAluno = a.idAluno
       JOIN professor p ON p.idProfessor = a.idProfessor
       WHERE b.idAluno = '$idAluno'";
@@ -106,7 +104,7 @@ include 'includes/head.php';
       $result = $conn->query($sql);
       
       while($row = $result->fetch_array()) { 
-        $the_rows[] = $row; 
+        $the_rows[] = $row;
       }
 		  
       
@@ -115,19 +113,22 @@ include 'includes/head.php';
       <p><strong>Disciplinas:</strong><br>
         <?php 
           // later use like:
+          if(!empty($the_rows)){
           foreach($the_rows as $row){
               echo $row['disciplina']."<br>";
             } 
+          }
         ?> 
         
       </p>
 
       <p><strong>Mestres:</strong><br>
         <?php 
-        
+        if(!empty($the_rows)){
           foreach($the_rows as $row){
               echo "<strong>".$row['disciplina'].": </strong> ".$row['mestres']."<br>";
             } 
+          }
         ?> 
         
       </p>
@@ -135,19 +136,23 @@ include 'includes/head.php';
       <p><strong>Período:</strong><br>
         <?php 
           // later use like:
-          foreach($the_rows as $row){
+          if(!empty($the_rows)){
+            foreach($the_rows as $row){
               echo "<strong>".$row['disciplina'].": </strong> ".$row['periodo']."<br>";
             }
+          }
         ?>
         
       </p>
 
       <p><strong>Média das Notas:</strong><br>
       <?php 
-        foreach($the_rows as $row){
+        if(!empty($the_rows)){
+          foreach($the_rows as $row){
             echo "<strong>".$row['disciplina'].": </strong> ";
           }
-      ?>
+        }
+     ?>
         
       </p>
 
