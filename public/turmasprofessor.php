@@ -3,7 +3,7 @@
 <html lang="pt-br">
 
 <?php
- session_start();
+
  require_once("conect.php");
 
 include 'includes/head.php';
@@ -40,7 +40,7 @@ include 'includes/head.php';
         <h2>Turmas</h2>
         <div class="fundo-txt-turmas d-flex">
             <input class="txt-turmas" type="text" name="" id="" placeholder="Digite aqui...">
-            <button class="btn-pesquisa-turmas" type="submit">aaa</button>
+            <button class="btn-pesquisa-turmas" type="submit"><img src="IMG/icons8-pesquisar-30.png" height="100%" width="100%" style="border-radius: 20px;"alt=""></button>
         </div>
 
         <?php
@@ -60,12 +60,13 @@ include 'includes/head.php';
         ?>
 
         <div class="fundo-turmas-professor">
-        <?php 
-        $periodo=  $row['periodo']; 
-        $disciplina = $row['disciplina'];
-
-        echo"<h3 class='periodo'>".$row['periodo']."º Período <br>".$row['disciplina']."</h3>"; ?></h3>
-            <?php echo"<a href='periodoprofessor.php' class='ver-turma' id='periodo$periodo-$disciplina'>VER TURMA</a>"; ?>
+            <?php 
+                $periodo=  $row['periodo']; 
+                $disciplina = $row['disciplina'];
+                echo"<h3 class='periodo'>".$row['periodo']."º Período <br>".$row['disciplina']."</h3>"; 
+            ?>
+            <a href="periodoprofessor.php?disciplina=<?php echo $disciplina?>&periodo=<?php echo $periodo?>" class="ver-turma">VER TURMA</a> 
+            
         </div>
 
         <?php

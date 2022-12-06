@@ -19,7 +19,7 @@ include 'includes/head.php';
 ?>
 
 <body>
-  
+
  <!-- início do preloader -->
  <div id="preloader">
   <div class="inner">
@@ -34,17 +34,14 @@ include 'includes/head.php';
 </div>
 <!-- fim do preloader --> 
 
-    <h2>Minha conta</h2>
+    <div class="container">
+        <h1>QUER FAZER PARTE DO DOCCLASS?</h1>
+  
+        <div class="btn-cadastro">
+            <a href="cad-aluno.php" class="btn-grande">Me tornar aluno</a>
+            <a href="cad-professor.php" class="btn-grande">Me tornar professor</a>
+        </div>
 
-    <div class="cont-professor">
-
-        <a href="meusdadosprofessor.php" class="box-6 box">MEUS DADOS</a>
-        <a href="minhasaulasprofessor.php" class="box-7 box">MINHAS AULAS</a>
-        <a href="turmasprofessor.php" class="box-8 box">TURMAS</a>
-        <a href="" class="box-9 box">ATIVIDADES</a>
-        <a href="users.php" class="box-10 box">CHATS</a>
-
-    </div>
 
 </body>
 

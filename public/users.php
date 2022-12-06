@@ -21,7 +21,7 @@
             $id = $_SESSION['id'];
           
             $sql = "SELECT * FROM $usuario WHERE id"."$usuario = $id";
-
+            
             $result = $conn->query($sql);
 
             if(mysqli_num_rows($result) > 0){

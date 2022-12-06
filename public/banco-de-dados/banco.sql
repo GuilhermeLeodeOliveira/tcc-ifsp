@@ -46,16 +46,14 @@ ALTER TABLE professor
   MODIFY idProfessor int(11) NOT NULL AUTO_INCREMENT;
 
 /*------------------------------------------------------------------------*/
+
 DROP TABLE aula;
 CREATE TABLE aula(
 	idAula int(11) NOT NULL,
 	disciplina varchar(100),
-  mestre varchar(225),
-  dataInicio DATE,
-  dataTermino date,
   periodo varchar(10),
   idProfessor int NOT NULL REFERENCES professor(idProfessor),
-  idAluno int NOT NULL REFERENCES aluno(idAluno)
+  idAluno int REFERENCES aluno(idAluno)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE aula
@@ -65,6 +63,24 @@ ALTER TABLE aula
   MODIFY idAula int(11) NOT NULL AUTO_INCREMENT;
 
 /*---------------------------------------------------------------------*/
+
+DROP TABLE atividade;
+CREATE TABLE atividade(
+  idAtividade int(11) NOT NULL,
+  numero int NOT NULL,
+  titulo VARCHAR(100) NOT NULL,
+  media VARCHAR(255) NOT NULL,
+  idAula int REFERENCES aula(idAula)
+);
+
+ALTER TABLE atividade
+  ADD PRIMARY KEY (idAtividade);
+
+ALTER TABLE atividade
+  MODIFY idAtividade int(11) NOT NULL AUTO_INCREMENT;
+
+/*------------------------------------------------------------------------*/
+
 DROP TABLE messages;
 CREATE TABLE `messages` (
   `msg_id` int(11) NOT NULL,

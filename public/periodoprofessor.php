@@ -3,7 +3,7 @@
 <html lang="pt-br">
 
 <?php
- session_start();
+
  require_once("conect.php");
 
 include 'includes/head.php';
@@ -39,22 +39,22 @@ include 'includes/head.php';
 
         <?php
             
-            $idProfessor = $_SESSION['idProfessor'];
+            $idProfessor = $_SESSION['id'];
             
-            $periodo = $_SESSION['periodoEscolhido'];
-            echo $periodo;
+            $periodo = $_GET['periodo'];
+            $disciplina = $_GET['disciplina'];
 
-            $sql = "SELECT b.nome, a.periodo, a.materia FROM aula a
+            $sql = "SELECT b.nome FROM aula a
             LEFT JOIN aluno b ON b.idAluno = a.idAluno
             RIGHT JOIN professor p ON p.idProfessor = a.idProfessor
-            WHERE p.idProfessor = '$idProfessor'";
+            WHERE p.idProfessor = '$idProfessor' AND a.disciplina = '$disciplina' AND a.periodo = '$periodo'";
 
             $result = $conn->query($sql);
             
 
         ?>
 
-        <h2 style="color: #66edff;">1º Período</h2>
+        <h2 style="color: #66edff;"><?php echo "$periodo º"?> Período</h2>
 
         <table>
             <tr>

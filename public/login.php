@@ -4,7 +4,6 @@
 
 <?php
 
-session_start();
 require_once("conect.php");
 include 'includes/head.php';
 
@@ -59,7 +58,7 @@ include 'includes/head.php';
         <div class="final-login">
             <p class="final-login-cadastro">Não tem uma conta? <br>
                 Faça o seu cadastro</p>
-            <a class="btn-pequeno" href="cadastro.html">CADASTRO</a>
+            <a class="btn-pequeno" href="cadastro.php">CADASTRO</a>
         </div>
     </div>
 

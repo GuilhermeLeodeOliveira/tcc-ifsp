@@ -4,7 +4,6 @@
 
 <?php
 
-session_start();
 require_once("conect.php");
 include 'includes/head.php';
 

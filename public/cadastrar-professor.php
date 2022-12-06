@@ -9,7 +9,16 @@
     $dataNasc=$_POST['dataNasc'];
     $cpf=$_POST['cpf'];
     $tel=$_POST['tel'];
-
+    $caixa = (isset($_POST['caixa'])) ? $_POST['caixa'] : array();
+    /*
+    if (count($caixa) > 0) {
+        foreach ($caixa as $caixa) { 
+            echo $caixa .' '; 
+        } 
+    } else {
+        echo "No skill has been selected";
+    }
+*/
     $senha=base64_encode($senha);
 
     if ($conn->connect_error) {
@@ -18,7 +27,6 @@
     
     }
 
-    
     if(isset($_FILES['image'])){
 
         $img_name = $_FILES['image']['name'];
@@ -49,6 +57,7 @@
 
                     $result = $conn->query($sql);
 
+                    
                     $sql = "SELECT idProfessor, email, senha FROM professor;";
 
                     $result = $conn->query($sql);
@@ -59,6 +68,21 @@
 
                             $_SESSION['id'] = $row['idProfessor'];
                             $_SESSION['usuario'] = "Professor";
+                            $idProfessor= $row['idProfessor'];
+
+                            if (count($caixa) > 0) {
+                                foreach ($caixa as $caixa) { 
+                                    for($i=1; $i<4; $i++){
+                                        
+                                        $sql = "INSERT INTO aula VALUES (DEFAULT, '$caixa', $i, '$idProfessor', 0);";
+                                        $result = $conn->query($sql);
+                                    
+                                    }
+                                    
+    
+                                } 
+                            }
+                            
                             
                             header("location:minhacontaprofessor.php");
                         
@@ -69,7 +93,6 @@
         }
     }
         
-
 
     $conn->close();
 

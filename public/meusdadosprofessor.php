@@ -1,6 +1,5 @@
 <?php
 
-  session_start();
   require_once("conect.php");
 
   
@@ -99,7 +98,7 @@ include 'includes/head.php';
       
       <?php
 
-        $sql = "SELECT a.disciplina, a.dataInicio FROM aula a
+        $sql = "SELECT a.disciplina, a.periodo FROM aula a
                 JOIN professor p ON a.idProfessor = p.idProfessor
                 WHERE p.idProfessor = '$idProfessor'";
 
@@ -115,9 +114,11 @@ include 'includes/head.php';
       <p><strong>Disciplinas:</strong><br>
         <?php 
           // later use like:
+          $i=1;
           if(!empty($the_rows)){
             foreach($the_rows as $row){
-              echo $row['disciplina']."<br>";
+              echo $row['disciplina'].": ".$row['periodo']."º periodo<br>";
+              $i++;
             }
           } 
 
@@ -125,17 +126,7 @@ include 'includes/head.php';
         
       </p>
 
-      <p><strong>Data de início:</strong><br>
-        <?php 
-        if(!empty($the_rows)){
-          foreach($the_rows as $row){
-            echo $row['dataInicio'].":"."<br>";
-          } 
-        }
-        ?> 
-        
-      </p>
-
+      
       <p><strong>Média dos alunos:</strong><br>
         <?php ?>
         

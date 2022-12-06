@@ -6,14 +6,14 @@
     $idUsuario .= $_SESSION['usuario'];
     $usuario = $_SESSION['usuario'];
 
-    if($usuario == "Aluno"){
+    if($usuario == "aluno"){
 
         $sql = "SELECT p.idProfessor, p.nome, p.img, p.status FROM aula a 
         JOIN aluno b ON a.idAluno = b.idAluno
         JOIN professor p ON p.idProfessor = a.idProfessor
         WHERE b.idAluno = $outgoing_id";
         
-    }else if($usuario == "Professor"){
+    }else if($usuario == "professor"){
         
         $sql = "SELECT b.idAluno, b.nome, b.img, b.status FROM aula a 
         JOIN aluno b ON a.idAluno = b.idAluno
