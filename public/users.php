@@ -34,8 +34,8 @@
             <span><?php echo $row['nome'] ?></span>
             <p><?php echo $row['status']; ?></p>
           </div>
+          <a href="minhaconta<?php echo $usuario?>.php">Voltar</a>
         </div>
-        <a href="php/logout.php?logout_id=<?php echo $id; ?>" class="logout">Logout</a>
       </header>
       <div class="search">
         <span class="text">Select an user to start chat</span>

@@ -126,17 +126,11 @@ include 'includes/head.php';
         
       </p>
 
-      
-      <p><strong>Média dos alunos:</strong><br>
-        <?php ?>
-        
-      </p>
-
-        
-
     </div>
   
   </div>
+  
+
   
 </body>
 

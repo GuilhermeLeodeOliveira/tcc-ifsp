@@ -67,7 +67,7 @@
                         if($row['email']==$email && $row['senha']==$senha){
 
                             $_SESSION['id'] = $row['idProfessor'];
-                            $_SESSION['usuario'] = "Professor";
+                            $_SESSION['usuario'] = "professor";
                             $idProfessor= $row['idProfessor'];
 
                             if (count($caixa) > 0) {

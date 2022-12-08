@@ -13,11 +13,11 @@
           
           $usuario = $_SESSION['usuario'];
           
-          if($usuario == "Aluno"){
+          if($usuario == "aluno"){
           
             $sql = mysqli_query($conn, "SELECT * FROM professor WHERE idProfessor = {$user_id}");
             
-          }else if($usuario == "Professor"){
+          }else if($usuario == "professor"){
             
             $sql = mysqli_query($conn, "SELECT * FROM aluno WHERE idAluno = {$user_id}");
           

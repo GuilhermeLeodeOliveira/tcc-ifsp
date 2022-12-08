@@ -15,7 +15,7 @@
     $periodo=$_POST['periodo'];
 
     if(isset($_FILES['arquivo'])){
-
+        
         $arquivo_name = $_FILES['arquivo']['name'];
         $arquivo_type = $_FILES['arquivo']['type'];
         $tmp_name = $_FILES['arquivo']['tmp_name'];
@@ -23,17 +23,33 @@
         $arquivo_explode = explode('.',$arquivo_name);
         $arquivo_ext = end($arquivo_explode);
 
-        $time = time();
-        $new_arquivo_name = $time.$arquivo_name;
+        $extensions = ["jpeg", "png", "jpg", "pdf", "mp4", "mp3"];
+            
+        if(in_array($arquivo_ext, $extensions) === true){
+            
+            $types = ["arquivo/jpeg", "arquivo/jpg", "arquivo/png", "arquivo/pdf", "arquivo/mp4", "arquivo/mp3"];
+            
+            
+                $time = time();
+                $new_arquivo_name = $time.$arquivo_name;
+            
+                if(move_uploaded_file($tmp_name,"aulas/".$new_arquivo_name)){
 
-        if(move_uploaded_file($tmp_name,"aulas/".$new_arquivo_name)){
+                    $sql = "SELECT idAula FROM aula WHERE disciplina = $lingua AND periodo = $periodo";
 
-            $sql = "INSERT INTO aluno VALUES (DEFAULT, '$nome', '$cpf', '$email', '$senha', '$dataNasc', '$tel',  '$new_arquivo_name', '$status');";
+                    $result = $conn->query($sql);
 
-            $result = $conn->query($sql);
+                    $idAula = $result;
 
+                    $sql = "INSERT INTO atividade VALUES (DEFAULT, '$aula', '$titulo', '$new_arquivo_name', '$idAula');";
 
+                    $result = $conn->query($sql);
+
+                }else{
+                    echo "não deu";
+                }
+
+            }
         }
-
-    }
+    header("Location:minhasaulasprofessor.php");
 ?>

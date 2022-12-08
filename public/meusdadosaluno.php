@@ -38,7 +38,7 @@ include 'includes/head.php';
 </div>
 <!-- fim do preloader --> 
 
-  <h2 style="color: #3299CC;">Meus dados</h2>
+  <h2>Meus dados</h2>
   <div class="fundo-meus-dados">
     
     <div class="meus-dados-a"> <!--Lembrar de perguntar sobre a alteração que fiz no layout, se aprovarem devo apagar a classe dessa div e apagar no css-->
@@ -144,20 +144,11 @@ include 'includes/head.php';
         
       </p>
 
-      <p><strong>Média das Notas:</strong><br>
-      <?php 
-        if(!empty($the_rows)){
-          foreach($the_rows as $row){
-            echo "<strong>".$row['disciplina'].": </strong> ";
-          }
-        }
-     ?>
-        
-      </p>
-
     </div>
   
   </div>
+
+
   
 </body>
 

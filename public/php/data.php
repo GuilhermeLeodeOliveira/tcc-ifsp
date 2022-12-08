@@ -1,7 +1,7 @@
 <?php
     while($row = mysqli_fetch_assoc($query)){
 
-        if($usuario == "Aluno"){
+        if($usuario == "aluno"){
 
             $sql2 = "SELECT * FROM messages WHERE (incoming_msg_id = {$row['idProfessor']}
                 OR outgoing_msg_id = {$row['idProfessor']}) AND (outgoing_msg_id = {$outgoing_id} 
@@ -30,7 +30,7 @@
                         <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
                     </a>';
             
-        }else if($usuario == "Professor"){
+        }else if($usuario == "professor"){
             
             $sql2 = "SELECT * FROM messages WHERE (incoming_msg_id = {$row['idAluno']}
                 OR outgoing_msg_id = {$row['idAluno']}) AND (outgoing_msg_id = {$outgoing_id} 

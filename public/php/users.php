@@ -9,9 +9,9 @@
     if($usuario == "aluno"){
 
         $sql = "SELECT p.idProfessor, p.nome, p.img, p.status FROM aula a 
-        JOIN aluno b ON a.idAluno = b.idAluno
         JOIN professor p ON p.idProfessor = a.idProfessor
-        WHERE b.idAluno = $outgoing_id";
+        JOIN aluno b ON a.idAluno = b.idAluno
+        WHERE a.idAluno = $outgoing_id";
         
     }else if($usuario == "professor"){
         

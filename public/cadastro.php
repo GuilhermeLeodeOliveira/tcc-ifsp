@@ -41,8 +41,9 @@ include 'includes/head.php';
             <a href="cad-aluno.php" class="btn-grande">Me tornar aluno</a>
             <a href="cad-professor.php" class="btn-grande">Me tornar professor</a>
         </div>
+      </div>
 
-
+      
 </body>
 
 </html>

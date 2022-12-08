@@ -36,7 +36,7 @@ include 'includes/head.php';
 
 
     <div class="container">
-        <h2 style="color: darkgoldenrod;">
+        <h2>
             Login
         </h2>
 
@@ -63,6 +63,7 @@ include 'includes/head.php';
     </div>
 
 
+    
 </body>
 
 </html>

@@ -69,6 +69,19 @@
   } 
 }
 
+footer{
+    background-color: #bce9ff;
+}
+
+li.foot{
+    list-style-type: none;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-between;
+}
+
 /*NAVBAR*/
 nav{
     background-color: #bce9ff;
@@ -213,7 +226,6 @@ input[type=email]:focus, [type=password]:focus{
 
 p.final-login-cadastro{
     font-family: cursive;
-    color: darkgoldenrod;
     font-size: 25px;
 }
 
@@ -290,7 +302,7 @@ a.btn-pequeno{
 
 .box-3{ 
     grid-area: box-3;
-    padding: 20px 39px 20px 39px;
+    padding: 20px 27px 20px 27px;
 }
 
 .box-4{
@@ -426,7 +438,7 @@ button.btn-pesquisa-turmas{
 div.turmas{
     width: 480px;
     height: 115px;
-    background-color:#fafa004b;
+    background-color:#bce9ff;
     margin-top: 15px;
     border-radius: 5px;
     display: flex;
@@ -440,16 +452,17 @@ p.dados{
 
 }
 
-button.matricula{
+a.matricula{
     background-color: #3299CC;
     border-radius: 5px;
     margin-right: 30px;
     height: 25px;
-    flex: 0.8;
     margin-top: 80px;
     font-size: x-small;
     border: none;
     font-weight: bold;
+    text-decoration: none;
+    color: #000;
 }
 
 div.foto{
@@ -649,7 +662,6 @@ img.displayed {
 
 .fundo{
     display: flex;
-    background-color: chartreuse;
     justify-content: space-around;
     align-items: center;
 
@@ -674,14 +686,10 @@ img.displayed {
     display: block;
 }
 
-.organo{
-    width: 100px;
-}
 
 .fundoOrgano{
     width:700px;
     text-align: center;
-    background-color: #be0808;
 }
 
 #textoApresentacao{
@@ -697,6 +705,18 @@ img.displayed {
     
     background-color: #ffffff;
     
+}
+
+form.contatar{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=radio], input[type=checkbox]{
+    height: 20px;
+    text-align: start;
+    margin: 0;
 }
 
 @media (max-width: 1064px){

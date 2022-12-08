@@ -42,7 +42,7 @@ include 'includes/head.php';
 
     <h2>Minhas aulas</h2>
 
-    <form class="minha-aula" action="cadastrar-aula.php" method="post">
+    <form class="minha-aula" action="cadastrar-aula.php" method="post" enctype="multipart/form-data">
 
         <div class="minhas-aulas-esquerda">
 
@@ -59,7 +59,7 @@ include 'includes/head.php';
 
         <div class="minhas-aulas-direita">
             <label for="arquivo" class="arquivo">Enviar Arquivo</label>
-            <input type="file" name="arquivo" id="arquivo" style="visibility: hidden;">
+            <input type="file" name="arquivo" id="arquivo" style="visibility: hidden;" accept="image/x-png,image/gif,image/jpeg,image/jpg">
 
             <select name="lingua" id="" class="aula">
                 <?php 
@@ -115,6 +115,7 @@ include 'includes/head.php';
     </form>
 
 
+    
 </body>
 
 </html>

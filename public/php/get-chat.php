@@ -7,13 +7,13 @@
         $output = "";
         $usuario = $_SESSION['usuario'];
 
-        if($usuario == "Aluno"){
+        if($usuario == "aluno"){
 
             $sql = "SELECT * FROM messages LEFT JOIN professor ON professor.idProfessor = messages.outgoing_msg_id
                 WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
                 OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id";
         
-        }else if($usuario == "Professor"){
+        }else if($usuario == "professor"){
         
             $sql = "SELECT * FROM messages LEFT JOIN aluno ON aluno.idAluno = messages.outgoing_msg_id
                 WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})

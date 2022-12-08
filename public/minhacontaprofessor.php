@@ -41,11 +41,13 @@ include 'includes/head.php';
         <a href="meusdadosprofessor.php" class="box-6 box">MEUS DADOS</a>
         <a href="minhasaulasprofessor.php" class="box-7 box">MINHAS AULAS</a>
         <a href="turmasprofessor.php" class="box-8 box">TURMAS</a>
-        <a href="" class="box-9 box">ATIVIDADES</a>
+        <a href="turmasprofessor2.php" class="box-9 box">ATIVIDADES</a>
         <a href="users.php" class="box-10 box">CHATS</a>
 
     </div>
 
+
+    
 </body>
 
 </html>

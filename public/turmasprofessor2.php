@@ -65,7 +65,7 @@ include 'includes/head.php';
                 $disciplina = $row['disciplina'];
                 echo"<h3 class='periodo'>".$row['periodo']."º Período <br>".$row['disciplina']."</h3>"; 
             ?>
-            <a href="periodoprofessor.php?disciplina=<?php echo $disciplina?>&periodo=<?php echo $periodo?>" class="ver-turma">VER TURMA</a> 
+            <a href="periodoprofessor2.php?disciplina=<?php echo $disciplina?>&periodo=<?php echo $periodo?>" class="ver-turma">VER TURMA</a> 
             
         </div>
 
@@ -77,9 +77,6 @@ include 'includes/head.php';
             
 
     </div>
-    
-
-    
 </body>
 
 </html>

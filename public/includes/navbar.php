@@ -51,13 +51,13 @@ if(!isset($_SESSION['id'])){
             <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link active" href="portal.html">Acesse o nosso portal</a>
+            <a class="nav-link active" href="portal.php">Acesse o nosso portal</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="contatar.html">Entre em contato</a>
+            <a class="nav-link active" href="contatar.php">Entre em contato</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link active" href="maisdaequipe.html">Mais sobre nós</a>
+            <a class="nav-link active" href="maisdaequipe.php">Mais sobre nós</a>
           </li>
           
           <li>
@@ -73,11 +73,7 @@ if(!isset($_SESSION['id'])){
     </div>
   </nav>
 
-<?php
-  
-  include 'includes/footer.php';
 
-?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
